@@ -1,0 +1,6 @@
+# Dawn of Divinity — своя причина смерти для Кары небес
+# Без public_knowledge: для окружения это смерть без свидетелей,
+# истинную причину видит только игрок.
+death_dod_smite = {
+	icon = "death_unknown.dds"
+}

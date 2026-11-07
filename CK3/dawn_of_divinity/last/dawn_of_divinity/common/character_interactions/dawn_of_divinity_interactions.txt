@@ -1,0 +1,67 @@
+# Dawn of Divinity — силы божества (character interactions)
+# Таргет-решений как в CK2 в CK3 нет: действие над другим персонажем
+# делается интеракцией. Кулдаун 100 лет = флаг с длительностью.
+
+dod_smite_interaction = {
+	category = interaction_category_hostile
+	icon = "gfx/interface/icons/character_interactions/dod_smite.dds"
+	desc = dod_smite_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = dod_deity
+			NOT = { has_character_flag = dod_smite_cooldown }
+			piety >= 500
+		}
+		scope:recipient = {
+			is_alive = yes
+		}
+	}
+
+	auto_accept = {
+		always = yes
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_piety = -500
+			add_character_flag = { flag = dod_smite_cooldown years = 100 }
+		}
+		scope:recipient = {
+			# своя причина смерти: 'поражён(а) гневом Рассвета'
+			death = { death_reason = death_dod_smite }
+		}
+	}
+}
+
+dod_heal_interaction = {
+	category = interaction_category_friendly
+	icon = "gfx/interface/icons/character_interactions/dod_heal.dds"
+	desc = dod_heal_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = dod_deity
+			NOT = { has_character_flag = dod_heal_cooldown }
+			piety >= 250
+		}
+		scope:recipient = {
+			is_alive = yes
+		}
+	}
+
+	auto_accept = {
+		always = yes
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_piety = -250
+			add_character_flag = { flag = dod_heal_cooldown years = 100 }
+		}
+		scope:recipient = {
+			dod_cure_illness_effect = yes
+			add_character_modifier = { modifier = dod_healing_touch years = 10 }
+		}
+	}
+}

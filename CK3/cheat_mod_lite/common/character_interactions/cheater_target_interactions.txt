@@ -1,0 +1,77 @@
+cheater_healing_interaction = {
+	icon = icon_dead
+	category = interaction_category_friendly
+
+	interface_priority = 1
+
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			has_trait = s_cheater
+		}
+		scope:recipient = {
+			OR = {
+				has_trait = ill
+				has_trait = pneumonic
+				has_trait = great_pox
+				has_trait = early_great_pox
+				has_trait = lovers_pox
+				has_trait = leper
+				has_trait = gout_ridden
+				has_trait = consumption
+				has_trait = cancer
+				has_trait = typhus
+				has_trait = bubonic_plague
+				has_trait = smallpox
+				has_trait = sickly
+				has_trait = infirm
+				has_trait = incapable
+				has_trait = eunuch
+				has_trait = blind
+				has_trait = wounded_1
+				has_trait = wounded_2
+				has_trait = wounded_3
+				has_trait = maimed
+				has_trait = one_eyed
+				has_trait = one_legged
+				has_trait = disfigured
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = lovers_pox
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = sickly
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = eunuch
+			remove_trait = blind
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+			remove_trait = maimed
+			remove_trait = one_eyed
+			remove_trait = one_legged
+			remove_trait = disfigured
+		}
+	}
+	
+	auto_accept = yes
+	
+	ai_will_do = {
+		base = 0
+	}
+}

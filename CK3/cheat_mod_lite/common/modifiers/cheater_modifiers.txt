@@ -1,0 +1,38 @@
+cheater_dynasty = {
+	icon = family_positive
+	fertility = 0.01
+	general_opinion = 1
+	dynasty_opinion = 1
+	dynasty_house_opinion = 1
+	county_opinion_add = 1
+	powerful_vassal_opinion = 1
+
+	monthly_income_mult = 0.01
+	monthly_piety_gain_mult = 0.01
+	monthly_prestige_gain_mult = 0.01
+	monthly_dynasty_prestige_mult = 0.01
+
+	positive_random_genetic_chance = 0.05
+	positive_inactive_inheritance_chance = 0.05
+	genetic_trait_strengthen_chance = 0.05
+	negative_random_genetic_chance = -0.05
+	negative_inactive_inheritance_chance = -0.05
+
+	knight_effectiveness_mult = 0.1
+	diplomacy_per_piety_level = 0.1
+	diplomacy_per_prestige_level = 0.15
+	learning_per_piety_level = 0.15
+	learning_per_prestige_level = 0.1
+	stewardship_per_piety_level = 0.1
+	stewardship_per_prestige_level = 0.1
+	intrigue_per_piety_level = 0.15
+	intrigue_per_prestige_level = 0.1
+	martial_per_piety_level = 0.1
+	martial_per_prestige_level = 0.15
+
+	monthly_lifestyle_xp_gain_mult = 0.05
+	development_growth_factor = 0.01
+	dread_gain_mult = 0.01
+
+	stacking = yes
+}

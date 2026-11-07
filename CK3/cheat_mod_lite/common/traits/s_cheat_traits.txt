@@ -1,0 +1,32 @@
+s_cheater = {
+	intrigue = 100
+	diplomacy = 100
+	stewardship = 100
+	martial = 100
+	learning = 100
+	prowess = 500
+
+	personal_scheme_power_mult = 1
+	owned_hostile_scheme_success_chance_add = 100
+	hostile_scheme_resistance_mult = 1
+	hostile_scheme_resistance_add = 100
+	scheme_discovery_chance_mult = 1
+	fertility = 1
+	monthly_prestige = 5
+
+	enemy_hard_casualty_modifier = 1
+	hard_casualty_modifier = -1
+	enemy_terrain_advantage = -1
+	hostile_county_attrition = -10
+	supply_duration = 100
+	min_combat_roll = 100
+	max_combat_roll = 500
+	movement_speed = 10
+	naval_movement_speed_mult = 10
+	siege_phase_time = -0.9
+	advantage = 500
+
+	monthly_county_control_change_factor = 1
+	faith_conversion_piety_cost_mult = -10
+	knight_effectiveness_mult = 5
+}

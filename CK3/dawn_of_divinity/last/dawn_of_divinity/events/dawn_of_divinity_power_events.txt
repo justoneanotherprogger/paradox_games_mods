@@ -1,0 +1,1302 @@
+namespace = dod_power_events
+
+# Драфт: выбор 1 силы из 3 предложенных
+dod_power_events.0001 = {
+	type = character_event
+	title = dod_draft_event_title
+	desc = dod_draft_event_desc
+
+	left_portrait = {
+		character = root
+	}
+
+	override_background = {
+		reference = dod_dawn
+	}
+
+	immediate = {
+		dod_roll_draft_slot_1 = yes
+		dod_roll_draft_slot_2 = yes
+		dod_roll_draft_slot_3 = yes
+	}
+
+	option = {
+		name = dod_opt_prestige_1
+		custom_tooltip = dod_power_prestige_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_prestige_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_1
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_2
+		custom_tooltip = dod_power_prestige_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_prestige_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_2
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_3
+		custom_tooltip = dod_power_prestige_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_prestige_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_3
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_4
+		custom_tooltip = dod_power_prestige_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_prestige_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_4
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_1
+		custom_tooltip = dod_power_piety_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_piety_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_1
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_2
+		custom_tooltip = dod_power_piety_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_piety_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_2
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_3
+		custom_tooltip = dod_power_piety_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_piety_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_3
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_4
+		custom_tooltip = dod_power_piety_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_piety_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_4
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_1
+		custom_tooltip = dod_power_gold_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_gold_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_1
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_2
+		custom_tooltip = dod_power_gold_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_gold_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_2
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_3
+		custom_tooltip = dod_power_gold_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_gold_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_3
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_4
+		custom_tooltip = dod_power_gold_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_gold_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_4
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_1
+		custom_tooltip = dod_power_martial_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_martial_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_1
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_2
+		custom_tooltip = dod_power_martial_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_martial_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_2
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_3
+		custom_tooltip = dod_power_martial_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_martial_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_3
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_4
+		custom_tooltip = dod_power_martial_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_martial_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_4
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_1
+		custom_tooltip = dod_power_diplomacy_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_diplomacy_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_1
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_2
+		custom_tooltip = dod_power_diplomacy_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_diplomacy_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_2
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_3
+		custom_tooltip = dod_power_diplomacy_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_diplomacy_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_3
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_4
+		custom_tooltip = dod_power_diplomacy_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_diplomacy_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_4
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_1
+		custom_tooltip = dod_power_learning_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_learning_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_1
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_2
+		custom_tooltip = dod_power_learning_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_learning_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_2
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_3
+		custom_tooltip = dod_power_learning_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_learning_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_3
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_4
+		custom_tooltip = dod_power_learning_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_learning_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_4
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_1
+		custom_tooltip = dod_power_health_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_health_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_1
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_2
+		custom_tooltip = dod_power_health_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_health_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_2
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_3
+		custom_tooltip = dod_power_health_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_health_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_3
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_4
+		custom_tooltip = dod_power_health_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_health_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_4
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_1
+		custom_tooltip = dod_power_opinion_1_desc
+		trigger = {
+			has_character_flag = dod_offer_1_opinion_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_1
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_2
+		custom_tooltip = dod_power_opinion_2_desc
+		trigger = {
+			has_character_flag = dod_offer_1_opinion_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_2
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_3
+		custom_tooltip = dod_power_opinion_3_desc
+		trigger = {
+			has_character_flag = dod_offer_1_opinion_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_3
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_4
+		custom_tooltip = dod_power_opinion_4_desc
+		trigger = {
+			has_character_flag = dod_offer_1_opinion_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_4
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_1
+		custom_tooltip = dod_power_prestige_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_prestige_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_1
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_2
+		custom_tooltip = dod_power_prestige_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_prestige_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_2
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_3
+		custom_tooltip = dod_power_prestige_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_prestige_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_3
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_4
+		custom_tooltip = dod_power_prestige_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_prestige_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_4
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_1
+		custom_tooltip = dod_power_piety_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_piety_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_1
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_2
+		custom_tooltip = dod_power_piety_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_piety_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_2
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_3
+		custom_tooltip = dod_power_piety_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_piety_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_3
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_4
+		custom_tooltip = dod_power_piety_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_piety_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_4
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_1
+		custom_tooltip = dod_power_gold_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_gold_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_1
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_2
+		custom_tooltip = dod_power_gold_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_gold_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_2
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_3
+		custom_tooltip = dod_power_gold_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_gold_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_3
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_4
+		custom_tooltip = dod_power_gold_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_gold_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_4
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_1
+		custom_tooltip = dod_power_martial_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_martial_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_1
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_2
+		custom_tooltip = dod_power_martial_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_martial_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_2
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_3
+		custom_tooltip = dod_power_martial_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_martial_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_3
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_4
+		custom_tooltip = dod_power_martial_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_martial_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_4
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_1
+		custom_tooltip = dod_power_diplomacy_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_diplomacy_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_1
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_2
+		custom_tooltip = dod_power_diplomacy_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_diplomacy_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_2
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_3
+		custom_tooltip = dod_power_diplomacy_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_diplomacy_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_3
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_4
+		custom_tooltip = dod_power_diplomacy_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_diplomacy_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_4
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_1
+		custom_tooltip = dod_power_learning_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_learning_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_1
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_2
+		custom_tooltip = dod_power_learning_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_learning_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_2
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_3
+		custom_tooltip = dod_power_learning_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_learning_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_3
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_4
+		custom_tooltip = dod_power_learning_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_learning_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_4
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_1
+		custom_tooltip = dod_power_health_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_health_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_1
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_2
+		custom_tooltip = dod_power_health_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_health_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_2
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_3
+		custom_tooltip = dod_power_health_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_health_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_3
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_4
+		custom_tooltip = dod_power_health_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_health_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_4
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_1
+		custom_tooltip = dod_power_opinion_1_desc
+		trigger = {
+			has_character_flag = dod_offer_2_opinion_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_1
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_2
+		custom_tooltip = dod_power_opinion_2_desc
+		trigger = {
+			has_character_flag = dod_offer_2_opinion_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_2
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_3
+		custom_tooltip = dod_power_opinion_3_desc
+		trigger = {
+			has_character_flag = dod_offer_2_opinion_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_3
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_4
+		custom_tooltip = dod_power_opinion_4_desc
+		trigger = {
+			has_character_flag = dod_offer_2_opinion_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_4
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_1
+		custom_tooltip = dod_power_prestige_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_prestige_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_1
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_2
+		custom_tooltip = dod_power_prestige_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_prestige_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_2
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_3
+		custom_tooltip = dod_power_prestige_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_prestige_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_3
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_prestige_4
+		custom_tooltip = dod_power_prestige_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_prestige_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_prestige_4
+		}
+		add_character_flag = dod_owned_prestige
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_1
+		custom_tooltip = dod_power_piety_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_piety_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_1
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_2
+		custom_tooltip = dod_power_piety_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_piety_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_2
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_3
+		custom_tooltip = dod_power_piety_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_piety_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_3
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_piety_4
+		custom_tooltip = dod_power_piety_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_piety_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_piety_4
+		}
+		add_character_flag = dod_owned_piety
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_1
+		custom_tooltip = dod_power_gold_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_gold_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_1
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_2
+		custom_tooltip = dod_power_gold_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_gold_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_2
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_3
+		custom_tooltip = dod_power_gold_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_gold_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_3
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_gold_4
+		custom_tooltip = dod_power_gold_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_gold_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_gold_4
+		}
+		add_character_flag = dod_owned_gold
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_1
+		custom_tooltip = dod_power_martial_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_martial_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_1
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_2
+		custom_tooltip = dod_power_martial_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_martial_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_2
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_3
+		custom_tooltip = dod_power_martial_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_martial_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_3
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_martial_4
+		custom_tooltip = dod_power_martial_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_martial_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_martial_4
+		}
+		add_character_flag = dod_owned_martial
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_1
+		custom_tooltip = dod_power_diplomacy_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_diplomacy_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_1
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_2
+		custom_tooltip = dod_power_diplomacy_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_diplomacy_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_2
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_3
+		custom_tooltip = dod_power_diplomacy_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_diplomacy_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_3
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_diplomacy_4
+		custom_tooltip = dod_power_diplomacy_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_diplomacy_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_diplomacy_4
+		}
+		add_character_flag = dod_owned_diplomacy
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_1
+		custom_tooltip = dod_power_learning_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_learning_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_1
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_2
+		custom_tooltip = dod_power_learning_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_learning_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_2
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_3
+		custom_tooltip = dod_power_learning_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_learning_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_3
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_learning_4
+		custom_tooltip = dod_power_learning_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_learning_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_learning_4
+		}
+		add_character_flag = dod_owned_learning
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_1
+		custom_tooltip = dod_power_health_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_health_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_1
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_2
+		custom_tooltip = dod_power_health_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_health_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_2
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_3
+		custom_tooltip = dod_power_health_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_health_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_3
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_health_4
+		custom_tooltip = dod_power_health_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_health_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_health_4
+		}
+		add_character_flag = dod_owned_health
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_1
+		custom_tooltip = dod_power_opinion_1_desc
+		trigger = {
+			has_character_flag = dod_offer_3_opinion_1
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_1
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_2
+		custom_tooltip = dod_power_opinion_2_desc
+		trigger = {
+			has_character_flag = dod_offer_3_opinion_2
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_2
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_3
+		custom_tooltip = dod_power_opinion_3_desc
+		trigger = {
+			has_character_flag = dod_offer_3_opinion_3
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_3
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	option = {
+		name = dod_opt_opinion_4
+		custom_tooltip = dod_power_opinion_4_desc
+		trigger = {
+			has_character_flag = dod_offer_3_opinion_4
+		}
+		add_character_modifier = {
+			modifier = dod_power_opinion_4
+		}
+		add_character_flag = dod_owned_opinion
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+	# Благословение Рассвета — четвёртый вариант, доступен только божеству
+	option = {
+		name = dod_blessing_option
+		custom_tooltip = dod_blessing_option_tt
+		trigger = { has_character_flag = dod_deity }
+		add_character_modifier = {
+			modifier = dod_blessing_of_dawn
+		}
+		remove_character_flag = dod_draft_open
+		dod_clear_offer_flags = yes
+	}
+}
+
+# Вознесение — праздник Обожествления (вызывается решением)
+dod_power_events.0002 = {
+	type = character_event
+	title = dod_apotheosis_event_title
+	desc = dod_apotheosis_event_desc
+
+	left_portrait = {
+		character = root
+	}
+
+	override_background = {
+		reference = dod_apotheosis
+	}
+
+	option = {
+		name = dod_apotheosis_option
+		custom_tooltip = dod_apotheosis_option_tt
+	}
+}

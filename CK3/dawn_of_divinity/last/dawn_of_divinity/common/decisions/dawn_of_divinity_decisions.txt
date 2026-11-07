@@ -1,0 +1,120 @@
+# Dawn of Divinity — решения
+
+get_roguelike_trait_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+	major = yes
+
+	ai_check_interval = 0
+
+	is_shown = {
+		NOT = { has_trait = divinity_roguelike_user }
+		NOT = { has_character_flag = roguelike_dod_story_created }
+	}
+
+	effect = {
+		add_trait = divinity_roguelike_user
+		trigger_event = dod_main_events.0001
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+# Отладочное решение: форсировать следующий драфт (удалите файл, если мешает)
+dod_debug_draft_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+	major = no
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_trait = divinity_roguelike_user
+	}
+
+	effect = {
+		dod_add_draft = yes
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+# Обожествление — доступно, когда собраны все 8 различных сил
+dod_apotheosis_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+	major = yes
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_trait = divinity_roguelike_user
+		NOT = { has_character_flag = dod_deity }
+		has_character_flag = dod_owned_prestige
+		has_character_flag = dod_owned_piety
+		has_character_flag = dod_owned_gold
+		has_character_flag = dod_owned_martial
+		has_character_flag = dod_owned_diplomacy
+		has_character_flag = dod_owned_learning
+		has_character_flag = dod_owned_health
+		has_character_flag = dod_owned_opinion
+	}
+
+	effect = {
+		add_character_flag = dod_deity
+		add_character_modifier = dod_apotheosis
+		add_piety = 250
+		trigger_event = { id = dod_power_events.0002 days = 1 }
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+# Отладочное решение: мгновенно выдать Обожествление (для теста Кары/Исцеления)
+dod_debug_deity_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+	major = no
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_trait = divinity_roguelike_user
+		NOT = { has_character_flag = dod_deity }
+	}
+
+	effect = {
+		add_character_flag = dod_deity
+		add_character_modifier = dod_apotheosis
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

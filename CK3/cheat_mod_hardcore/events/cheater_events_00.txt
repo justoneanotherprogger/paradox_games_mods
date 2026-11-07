@@ -1,0 +1,178 @@
+namespace = cheater_events
+
+cheater_events.0001 = {
+	type = character_event
+	title = cheater_events.0001.t
+	desc = cheater_events.0001.d
+	theme = stewardship
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = cheater_events.0001.a
+		trigger_event = cheater_events.0002
+	}
+
+	option = {
+		name = cheater_events.0001.b
+		trigger_event = cheater_events.0003
+	}
+
+	option = {
+		name = cheater_events.0001.c
+		trigger_event = cheater_events.0004
+	}
+
+	option = {
+		name = cheater_events.0001.f
+		trigger_event = cheater_events.0005
+	}
+
+	option = {
+		name = cheater_events.0001.e
+	}
+}
+
+cheater_events.0002 = {
+	type = character_event
+	title = cheater_events.0001.a
+	desc = cheater_events.0000.d
+	theme = stewardship
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = "0"
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "100"
+		add_gold = 100
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "1000"
+		add_gold = 1000
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "10000"
+		add_gold = 10000
+		trigger_event = cheater_events.0001
+	}
+}
+
+cheater_events.0003 = {
+	type = character_event
+	title = cheater_events.0001.b
+	desc = cheater_events.0000.d
+	theme = stewardship
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = "0"
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "100"
+		add_prestige = 100
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "1000"
+		add_prestige = 1000
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "10000"
+		add_prestige = 10000
+		trigger_event = cheater_events.0001
+	}
+}
+
+cheater_events.0004 = {
+	type = character_event
+	title = cheater_events.0001.c
+	desc = cheater_events.0000.d
+	theme = stewardship
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = "0"
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "100"
+		add_piety = 100
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "1000"
+		add_piety = 1000
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "10000"
+		add_piety = 10000
+		trigger_event = cheater_events.0001
+	}
+}
+
+cheater_events.0005 = {
+	type = character_event
+	title = cheater_events.0001.f
+	desc = cheater_events.0000.d
+	theme = stewardship
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {
+		name = "0"
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "100"
+		root.dynasty = {
+			add_dynasty_prestige = 100
+		}
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "1000"
+		root.dynasty = {
+			add_dynasty_prestige = 1000
+		}
+		trigger_event = cheater_events.0001
+	}
+
+	option = {
+		name = "10000"
+		root.dynasty = {
+			add_dynasty_prestige = 10000
+		}
+		trigger_event = cheater_events.0001
+	}
+}

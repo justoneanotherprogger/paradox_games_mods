@@ -1,0 +1,841 @@
+# Dawn of Divinity — скриптовые эффекты
+
+# Инициализация рана (вызывается из on_setup story cycle, scope = story_owner)
+set_initial_values_for_roguelike_dod_modifiers = {
+	dod_add_draft = yes
+}
+
+# Выдать один драфт силы, если ни один драфт ещё не открыт
+dod_add_draft = {
+	if = {
+		limit = { NOT = { has_character_flag = dod_draft_open } }
+		add_character_flag = dod_draft_open
+		trigger_event = { id = dod_power_events.0001 days = 1 }
+	}
+}
+
+# Слот 1: случайная сила (повторы разрешены, складываются),
+# исключая силы, уже предложенные в слотах 1..0
+dod_roll_draft_slot_1 = {
+	random_list = {
+		60 = {
+			add_character_flag = dod_slot1_picked_prestige
+			add_character_flag = dod_offer_1_prestige_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_prestige
+			add_character_flag = dod_offer_1_prestige_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_prestige
+			add_character_flag = dod_offer_1_prestige_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_prestige
+			add_character_flag = dod_offer_1_prestige_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_piety
+			add_character_flag = dod_offer_1_piety_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_piety
+			add_character_flag = dod_offer_1_piety_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_piety
+			add_character_flag = dod_offer_1_piety_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_piety
+			add_character_flag = dod_offer_1_piety_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_gold
+			add_character_flag = dod_offer_1_gold_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_gold
+			add_character_flag = dod_offer_1_gold_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_gold
+			add_character_flag = dod_offer_1_gold_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_gold
+			add_character_flag = dod_offer_1_gold_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_martial
+			add_character_flag = dod_offer_1_martial_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_martial
+			add_character_flag = dod_offer_1_martial_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_martial
+			add_character_flag = dod_offer_1_martial_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_martial
+			add_character_flag = dod_offer_1_martial_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_diplomacy
+			add_character_flag = dod_offer_1_diplomacy_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_diplomacy
+			add_character_flag = dod_offer_1_diplomacy_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_diplomacy
+			add_character_flag = dod_offer_1_diplomacy_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_diplomacy
+			add_character_flag = dod_offer_1_diplomacy_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_learning
+			add_character_flag = dod_offer_1_learning_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_learning
+			add_character_flag = dod_offer_1_learning_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_learning
+			add_character_flag = dod_offer_1_learning_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_learning
+			add_character_flag = dod_offer_1_learning_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_health
+			add_character_flag = dod_offer_1_health_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_health
+			add_character_flag = dod_offer_1_health_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_health
+			add_character_flag = dod_offer_1_health_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_health
+			add_character_flag = dod_offer_1_health_4
+		}
+		60 = {
+			add_character_flag = dod_slot1_picked_opinion
+			add_character_flag = dod_offer_1_opinion_1
+		}
+		27 = {
+			add_character_flag = dod_slot1_picked_opinion
+			add_character_flag = dod_offer_1_opinion_2
+		}
+		10 = {
+			add_character_flag = dod_slot1_picked_opinion
+			add_character_flag = dod_offer_1_opinion_3
+		}
+		3 = {
+			add_character_flag = dod_slot1_picked_opinion
+			add_character_flag = dod_offer_1_opinion_4
+		}
+	}
+}
+
+# Слот 2: случайная сила (повторы разрешены, складываются),
+# исключая силы, уже предложенные в слотах 1..1
+dod_roll_draft_slot_2 = {
+	random_list = {
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			add_character_flag = dod_slot2_picked_prestige
+			add_character_flag = dod_offer_2_prestige_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			add_character_flag = dod_slot2_picked_prestige
+			add_character_flag = dod_offer_2_prestige_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			add_character_flag = dod_slot2_picked_prestige
+			add_character_flag = dod_offer_2_prestige_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			add_character_flag = dod_slot2_picked_prestige
+			add_character_flag = dod_offer_2_prestige_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			add_character_flag = dod_slot2_picked_piety
+			add_character_flag = dod_offer_2_piety_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			add_character_flag = dod_slot2_picked_piety
+			add_character_flag = dod_offer_2_piety_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			add_character_flag = dod_slot2_picked_piety
+			add_character_flag = dod_offer_2_piety_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			add_character_flag = dod_slot2_picked_piety
+			add_character_flag = dod_offer_2_piety_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			add_character_flag = dod_slot2_picked_gold
+			add_character_flag = dod_offer_2_gold_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			add_character_flag = dod_slot2_picked_gold
+			add_character_flag = dod_offer_2_gold_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			add_character_flag = dod_slot2_picked_gold
+			add_character_flag = dod_offer_2_gold_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			add_character_flag = dod_slot2_picked_gold
+			add_character_flag = dod_offer_2_gold_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			add_character_flag = dod_slot2_picked_martial
+			add_character_flag = dod_offer_2_martial_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			add_character_flag = dod_slot2_picked_martial
+			add_character_flag = dod_offer_2_martial_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			add_character_flag = dod_slot2_picked_martial
+			add_character_flag = dod_offer_2_martial_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			add_character_flag = dod_slot2_picked_martial
+			add_character_flag = dod_offer_2_martial_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			add_character_flag = dod_slot2_picked_diplomacy
+			add_character_flag = dod_offer_2_diplomacy_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			add_character_flag = dod_slot2_picked_diplomacy
+			add_character_flag = dod_offer_2_diplomacy_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			add_character_flag = dod_slot2_picked_diplomacy
+			add_character_flag = dod_offer_2_diplomacy_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			add_character_flag = dod_slot2_picked_diplomacy
+			add_character_flag = dod_offer_2_diplomacy_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			add_character_flag = dod_slot2_picked_learning
+			add_character_flag = dod_offer_2_learning_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			add_character_flag = dod_slot2_picked_learning
+			add_character_flag = dod_offer_2_learning_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			add_character_flag = dod_slot2_picked_learning
+			add_character_flag = dod_offer_2_learning_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			add_character_flag = dod_slot2_picked_learning
+			add_character_flag = dod_offer_2_learning_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			add_character_flag = dod_slot2_picked_health
+			add_character_flag = dod_offer_2_health_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			add_character_flag = dod_slot2_picked_health
+			add_character_flag = dod_offer_2_health_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			add_character_flag = dod_slot2_picked_health
+			add_character_flag = dod_offer_2_health_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			add_character_flag = dod_slot2_picked_health
+			add_character_flag = dod_offer_2_health_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			add_character_flag = dod_slot2_picked_opinion
+			add_character_flag = dod_offer_2_opinion_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			add_character_flag = dod_slot2_picked_opinion
+			add_character_flag = dod_offer_2_opinion_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			add_character_flag = dod_slot2_picked_opinion
+			add_character_flag = dod_offer_2_opinion_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			add_character_flag = dod_slot2_picked_opinion
+			add_character_flag = dod_offer_2_opinion_4
+		}
+	}
+}
+
+# Слот 3: случайная сила (повторы разрешены, складываются),
+# исключая силы, уже предложенные в слотах 1..2
+dod_roll_draft_slot_3 = {
+	random_list = {
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_prestige }
+			add_character_flag = dod_slot3_picked_prestige
+			add_character_flag = dod_offer_3_prestige_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_prestige }
+			add_character_flag = dod_slot3_picked_prestige
+			add_character_flag = dod_offer_3_prestige_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_prestige }
+			add_character_flag = dod_slot3_picked_prestige
+			add_character_flag = dod_offer_3_prestige_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_prestige }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_prestige }
+			add_character_flag = dod_slot3_picked_prestige
+			add_character_flag = dod_offer_3_prestige_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_piety }
+			add_character_flag = dod_slot3_picked_piety
+			add_character_flag = dod_offer_3_piety_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_piety }
+			add_character_flag = dod_slot3_picked_piety
+			add_character_flag = dod_offer_3_piety_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_piety }
+			add_character_flag = dod_slot3_picked_piety
+			add_character_flag = dod_offer_3_piety_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_piety }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_piety }
+			add_character_flag = dod_slot3_picked_piety
+			add_character_flag = dod_offer_3_piety_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_gold }
+			add_character_flag = dod_slot3_picked_gold
+			add_character_flag = dod_offer_3_gold_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_gold }
+			add_character_flag = dod_slot3_picked_gold
+			add_character_flag = dod_offer_3_gold_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_gold }
+			add_character_flag = dod_slot3_picked_gold
+			add_character_flag = dod_offer_3_gold_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_gold }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_gold }
+			add_character_flag = dod_slot3_picked_gold
+			add_character_flag = dod_offer_3_gold_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_martial }
+			add_character_flag = dod_slot3_picked_martial
+			add_character_flag = dod_offer_3_martial_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_martial }
+			add_character_flag = dod_slot3_picked_martial
+			add_character_flag = dod_offer_3_martial_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_martial }
+			add_character_flag = dod_slot3_picked_martial
+			add_character_flag = dod_offer_3_martial_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_martial }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_martial }
+			add_character_flag = dod_slot3_picked_martial
+			add_character_flag = dod_offer_3_martial_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_diplomacy }
+			add_character_flag = dod_slot3_picked_diplomacy
+			add_character_flag = dod_offer_3_diplomacy_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_diplomacy }
+			add_character_flag = dod_slot3_picked_diplomacy
+			add_character_flag = dod_offer_3_diplomacy_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_diplomacy }
+			add_character_flag = dod_slot3_picked_diplomacy
+			add_character_flag = dod_offer_3_diplomacy_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_diplomacy }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_diplomacy }
+			add_character_flag = dod_slot3_picked_diplomacy
+			add_character_flag = dod_offer_3_diplomacy_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_learning }
+			add_character_flag = dod_slot3_picked_learning
+			add_character_flag = dod_offer_3_learning_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_learning }
+			add_character_flag = dod_slot3_picked_learning
+			add_character_flag = dod_offer_3_learning_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_learning }
+			add_character_flag = dod_slot3_picked_learning
+			add_character_flag = dod_offer_3_learning_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_learning }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_learning }
+			add_character_flag = dod_slot3_picked_learning
+			add_character_flag = dod_offer_3_learning_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_health }
+			add_character_flag = dod_slot3_picked_health
+			add_character_flag = dod_offer_3_health_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_health }
+			add_character_flag = dod_slot3_picked_health
+			add_character_flag = dod_offer_3_health_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_health }
+			add_character_flag = dod_slot3_picked_health
+			add_character_flag = dod_offer_3_health_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_health }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_health }
+			add_character_flag = dod_slot3_picked_health
+			add_character_flag = dod_offer_3_health_4
+		}
+		60 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_opinion }
+			add_character_flag = dod_slot3_picked_opinion
+			add_character_flag = dod_offer_3_opinion_1
+		}
+		27 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_opinion }
+			add_character_flag = dod_slot3_picked_opinion
+			add_character_flag = dod_offer_3_opinion_2
+		}
+		10 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_opinion }
+			add_character_flag = dod_slot3_picked_opinion
+			add_character_flag = dod_offer_3_opinion_3
+		}
+		3 = {
+			modifier = { factor = 0 has_character_flag = dod_slot1_picked_opinion }
+			modifier = { factor = 0 has_character_flag = dod_slot2_picked_opinion }
+			add_character_flag = dod_slot3_picked_opinion
+			add_character_flag = dod_offer_3_opinion_4
+		}
+	}
+}
+
+# Стереть флаги текущих предложений (безопасно вызывать всегда)
+dod_clear_offer_flags = {
+	remove_character_flag = dod_slot1_picked_prestige
+	remove_character_flag = dod_offer_1_prestige_1
+	remove_character_flag = dod_offer_1_prestige_2
+	remove_character_flag = dod_offer_1_prestige_3
+	remove_character_flag = dod_offer_1_prestige_4
+	remove_character_flag = dod_slot1_picked_piety
+	remove_character_flag = dod_offer_1_piety_1
+	remove_character_flag = dod_offer_1_piety_2
+	remove_character_flag = dod_offer_1_piety_3
+	remove_character_flag = dod_offer_1_piety_4
+	remove_character_flag = dod_slot1_picked_gold
+	remove_character_flag = dod_offer_1_gold_1
+	remove_character_flag = dod_offer_1_gold_2
+	remove_character_flag = dod_offer_1_gold_3
+	remove_character_flag = dod_offer_1_gold_4
+	remove_character_flag = dod_slot1_picked_martial
+	remove_character_flag = dod_offer_1_martial_1
+	remove_character_flag = dod_offer_1_martial_2
+	remove_character_flag = dod_offer_1_martial_3
+	remove_character_flag = dod_offer_1_martial_4
+	remove_character_flag = dod_slot1_picked_diplomacy
+	remove_character_flag = dod_offer_1_diplomacy_1
+	remove_character_flag = dod_offer_1_diplomacy_2
+	remove_character_flag = dod_offer_1_diplomacy_3
+	remove_character_flag = dod_offer_1_diplomacy_4
+	remove_character_flag = dod_slot1_picked_learning
+	remove_character_flag = dod_offer_1_learning_1
+	remove_character_flag = dod_offer_1_learning_2
+	remove_character_flag = dod_offer_1_learning_3
+	remove_character_flag = dod_offer_1_learning_4
+	remove_character_flag = dod_slot1_picked_health
+	remove_character_flag = dod_offer_1_health_1
+	remove_character_flag = dod_offer_1_health_2
+	remove_character_flag = dod_offer_1_health_3
+	remove_character_flag = dod_offer_1_health_4
+	remove_character_flag = dod_slot1_picked_opinion
+	remove_character_flag = dod_offer_1_opinion_1
+	remove_character_flag = dod_offer_1_opinion_2
+	remove_character_flag = dod_offer_1_opinion_3
+	remove_character_flag = dod_offer_1_opinion_4
+	remove_character_flag = dod_slot2_picked_prestige
+	remove_character_flag = dod_offer_2_prestige_1
+	remove_character_flag = dod_offer_2_prestige_2
+	remove_character_flag = dod_offer_2_prestige_3
+	remove_character_flag = dod_offer_2_prestige_4
+	remove_character_flag = dod_slot2_picked_piety
+	remove_character_flag = dod_offer_2_piety_1
+	remove_character_flag = dod_offer_2_piety_2
+	remove_character_flag = dod_offer_2_piety_3
+	remove_character_flag = dod_offer_2_piety_4
+	remove_character_flag = dod_slot2_picked_gold
+	remove_character_flag = dod_offer_2_gold_1
+	remove_character_flag = dod_offer_2_gold_2
+	remove_character_flag = dod_offer_2_gold_3
+	remove_character_flag = dod_offer_2_gold_4
+	remove_character_flag = dod_slot2_picked_martial
+	remove_character_flag = dod_offer_2_martial_1
+	remove_character_flag = dod_offer_2_martial_2
+	remove_character_flag = dod_offer_2_martial_3
+	remove_character_flag = dod_offer_2_martial_4
+	remove_character_flag = dod_slot2_picked_diplomacy
+	remove_character_flag = dod_offer_2_diplomacy_1
+	remove_character_flag = dod_offer_2_diplomacy_2
+	remove_character_flag = dod_offer_2_diplomacy_3
+	remove_character_flag = dod_offer_2_diplomacy_4
+	remove_character_flag = dod_slot2_picked_learning
+	remove_character_flag = dod_offer_2_learning_1
+	remove_character_flag = dod_offer_2_learning_2
+	remove_character_flag = dod_offer_2_learning_3
+	remove_character_flag = dod_offer_2_learning_4
+	remove_character_flag = dod_slot2_picked_health
+	remove_character_flag = dod_offer_2_health_1
+	remove_character_flag = dod_offer_2_health_2
+	remove_character_flag = dod_offer_2_health_3
+	remove_character_flag = dod_offer_2_health_4
+	remove_character_flag = dod_slot2_picked_opinion
+	remove_character_flag = dod_offer_2_opinion_1
+	remove_character_flag = dod_offer_2_opinion_2
+	remove_character_flag = dod_offer_2_opinion_3
+	remove_character_flag = dod_offer_2_opinion_4
+	remove_character_flag = dod_slot3_picked_prestige
+	remove_character_flag = dod_offer_3_prestige_1
+	remove_character_flag = dod_offer_3_prestige_2
+	remove_character_flag = dod_offer_3_prestige_3
+	remove_character_flag = dod_offer_3_prestige_4
+	remove_character_flag = dod_slot3_picked_piety
+	remove_character_flag = dod_offer_3_piety_1
+	remove_character_flag = dod_offer_3_piety_2
+	remove_character_flag = dod_offer_3_piety_3
+	remove_character_flag = dod_offer_3_piety_4
+	remove_character_flag = dod_slot3_picked_gold
+	remove_character_flag = dod_offer_3_gold_1
+	remove_character_flag = dod_offer_3_gold_2
+	remove_character_flag = dod_offer_3_gold_3
+	remove_character_flag = dod_offer_3_gold_4
+	remove_character_flag = dod_slot3_picked_martial
+	remove_character_flag = dod_offer_3_martial_1
+	remove_character_flag = dod_offer_3_martial_2
+	remove_character_flag = dod_offer_3_martial_3
+	remove_character_flag = dod_offer_3_martial_4
+	remove_character_flag = dod_slot3_picked_diplomacy
+	remove_character_flag = dod_offer_3_diplomacy_1
+	remove_character_flag = dod_offer_3_diplomacy_2
+	remove_character_flag = dod_offer_3_diplomacy_3
+	remove_character_flag = dod_offer_3_diplomacy_4
+	remove_character_flag = dod_slot3_picked_learning
+	remove_character_flag = dod_offer_3_learning_1
+	remove_character_flag = dod_offer_3_learning_2
+	remove_character_flag = dod_offer_3_learning_3
+	remove_character_flag = dod_offer_3_learning_4
+	remove_character_flag = dod_slot3_picked_health
+	remove_character_flag = dod_offer_3_health_1
+	remove_character_flag = dod_offer_3_health_2
+	remove_character_flag = dod_offer_3_health_3
+	remove_character_flag = dod_offer_3_health_4
+	remove_character_flag = dod_slot3_picked_opinion
+	remove_character_flag = dod_offer_3_opinion_1
+	remove_character_flag = dod_offer_3_opinion_2
+	remove_character_flag = dod_offer_3_opinion_3
+	remove_character_flag = dod_offer_3_opinion_4
+}
+
+# Полная очистка рана (вызывается из on_end story cycle, scope = story_owner)
+remove_dod_roguelike_story_modifiers = {
+	remove_character_flag = dod_draft_open
+	dod_clear_offer_flags = yes
+	remove_character_flag = dod_owned_prestige
+	remove_character_flag = dod_owned_piety
+	remove_character_flag = dod_owned_gold
+	remove_character_flag = dod_owned_martial
+	remove_character_flag = dod_owned_diplomacy
+	remove_character_flag = dod_owned_learning
+	remove_character_flag = dod_owned_health
+	remove_character_flag = dod_owned_opinion
+	while = {
+		limit = { has_character_modifier = dod_power_prestige_1 }
+		remove_character_modifier = dod_power_prestige_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_prestige_2 }
+		remove_character_modifier = dod_power_prestige_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_prestige_3 }
+		remove_character_modifier = dod_power_prestige_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_prestige_4 }
+		remove_character_modifier = dod_power_prestige_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_piety_1 }
+		remove_character_modifier = dod_power_piety_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_piety_2 }
+		remove_character_modifier = dod_power_piety_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_piety_3 }
+		remove_character_modifier = dod_power_piety_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_piety_4 }
+		remove_character_modifier = dod_power_piety_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_gold_1 }
+		remove_character_modifier = dod_power_gold_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_gold_2 }
+		remove_character_modifier = dod_power_gold_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_gold_3 }
+		remove_character_modifier = dod_power_gold_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_gold_4 }
+		remove_character_modifier = dod_power_gold_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_martial_1 }
+		remove_character_modifier = dod_power_martial_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_martial_2 }
+		remove_character_modifier = dod_power_martial_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_martial_3 }
+		remove_character_modifier = dod_power_martial_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_martial_4 }
+		remove_character_modifier = dod_power_martial_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_diplomacy_1 }
+		remove_character_modifier = dod_power_diplomacy_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_diplomacy_2 }
+		remove_character_modifier = dod_power_diplomacy_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_diplomacy_3 }
+		remove_character_modifier = dod_power_diplomacy_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_diplomacy_4 }
+		remove_character_modifier = dod_power_diplomacy_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_learning_1 }
+		remove_character_modifier = dod_power_learning_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_learning_2 }
+		remove_character_modifier = dod_power_learning_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_learning_3 }
+		remove_character_modifier = dod_power_learning_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_learning_4 }
+		remove_character_modifier = dod_power_learning_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_health_1 }
+		remove_character_modifier = dod_power_health_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_health_2 }
+		remove_character_modifier = dod_power_health_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_health_3 }
+		remove_character_modifier = dod_power_health_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_health_4 }
+		remove_character_modifier = dod_power_health_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_opinion_1 }
+		remove_character_modifier = dod_power_opinion_1
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_opinion_2 }
+		remove_character_modifier = dod_power_opinion_2
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_opinion_3 }
+		remove_character_modifier = dod_power_opinion_3
+	}
+	while = {
+		limit = { has_character_modifier = dod_power_opinion_4 }
+		remove_character_modifier = dod_power_opinion_4
+	}
+	while = {
+		limit = { has_character_modifier = dod_blessing_of_dawn }
+		remove_character_modifier = dod_blessing_of_dawn
+	}
+	if = {
+		limit = { has_character_modifier = dod_apotheosis }
+		remove_character_modifier = dod_apotheosis
+	}
+	remove_character_flag = dod_deity
+	remove_character_flag = dod_smite_cooldown
+	remove_character_flag = dod_heal_cooldown
+}
+
+# Исцелить цель: снять все болезни и раны (список болезней CK3)
+dod_cure_illness_effect = {
+	if = {
+		limit = { has_trait = ill }
+		remove_trait = ill
+	}
+	if = {
+		limit = { has_trait = pneumonic }
+		remove_trait = pneumonic
+	}
+	if = {
+		limit = { has_trait = cancer }
+		remove_trait = cancer
+	}
+	if = {
+		limit = { has_trait = consumption }
+		remove_trait = consumption
+	}
+	if = {
+		limit = { has_trait = gout_ridden }
+		remove_trait = gout_ridden
+	}
+	if = {
+		limit = { has_trait = great_pox }
+		remove_trait = great_pox
+	}
+	if = {
+		limit = { has_trait = leper }
+		remove_trait = leper
+	}
+	if = {
+		limit = { has_trait = sickly }
+		remove_trait = sickly
+	}
+	if = {
+		limit = { has_trait = wounded_1 }
+		remove_trait = wounded_1
+	}
+	if = {
+		limit = { has_trait = wounded_2 }
+		remove_trait = wounded_2
+	}
+	if = {
+		limit = { has_trait = wounded_3 }
+		remove_trait = wounded_3
+	}
+}

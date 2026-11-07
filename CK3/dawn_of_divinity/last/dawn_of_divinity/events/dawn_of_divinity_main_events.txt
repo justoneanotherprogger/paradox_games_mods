@@ -1,0 +1,16 @@
+namespace = dod_main_events
+
+# Скрытый запуск story cycle после принятия решения
+dod_main_events.0001 = {
+	hidden = true
+	type = character_event
+
+	trigger = {
+		has_trait = divinity_roguelike_user
+		NOT = { has_character_flag = roguelike_dod_story_created }
+	}
+
+	immediate = {
+		create_story = story_cycle_main_character_roguelike_dod
+	}
+}

@@ -1,0 +1,12 @@
+# Dawn of Divinity — фоны событий (картинки рисует scripts/gen_event_pics.py)
+dod_dawn = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dod_dawn.dds"
+	}
+}
+
+dod_apotheosis = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dod_apotheosis.dds"
+	}
+}

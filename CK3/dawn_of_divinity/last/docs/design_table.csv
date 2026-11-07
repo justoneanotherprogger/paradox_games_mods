@@ -1,0 +1,26 @@
+Code,Name,Normal (1),Rare (2),Epic (3),Legendary (4),Eternal,Note
+1,Prestige,0.1,0.2,0.5,1,No,
+2,Prestige %,1,2,5,10,No,
+3,Piety,0.1,0.2,0.5,1,No,
+4,Piety %,1,2,5,10,No,
+5,Gold,0.1,0.2,0.5,1,No,
+6,Gold %,1,2,5,10,No,
+7,Martial,1,2,5,10,No,
+8,Diplomacy,1,2,5,10,No,
+9,Stewardship,1,2,5,10,No,
+10,Intrigue,1,2,5,10,No,
+11,Learning,1,2,5,10,No,
+12,Prowess,1,2,5,10,No,
+13,Fertility,5,10,25,50,No,
+14,Health,1,2,5,10,No,
+15,Kill Ability,,,,1 / 100 years,Yes,"Кулдаун прокидывается при использовании, уже идущий не снизить"
+16,Heal Ability,,,,1 / 100 years,Yes,"Кулдаун прокидывается при использовании, уже идущий не снизить"
+17,General Opinion,2,4,10,20,No,
+18,Prowess not decreasing,,,,1,Yes,
+19,Attributes Saving %,1,2,5,10,Yes,Сохраняется часть базовых атрибутов для передачи следующим
+20,,,,,,,
+21,,,,,,,
+22,,,,,,,
+23,,,,,,,
+24,,,,,,,
+25,,,,,,,

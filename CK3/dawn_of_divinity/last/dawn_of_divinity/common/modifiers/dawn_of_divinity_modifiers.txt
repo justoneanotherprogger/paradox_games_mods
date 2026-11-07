@@ -1,0 +1,228 @@
+# Dawn of Divinity — силы носителя (8 сил x 4 редкости) + благословение
+# Сгенерировано build_dod.py; значения редкостей по таблице автора
+# stacking = yes обязателен: без него повторная выдача модификатора
+# НЕ создаёт второй экземпляр (баг-репорт автора v0.3.3)
+
+dod_power_prestige_1 = {
+	icon = prestige_positive
+	stacking = yes
+	monthly_prestige = 0.1
+}
+
+dod_power_prestige_2 = {
+	icon = prestige_positive
+	stacking = yes
+	monthly_prestige = 0.2
+}
+
+dod_power_prestige_3 = {
+	icon = prestige_positive
+	stacking = yes
+	monthly_prestige = 0.5
+}
+
+dod_power_prestige_4 = {
+	icon = prestige_positive
+	stacking = yes
+	monthly_prestige = 1
+}
+
+dod_power_piety_1 = {
+	icon = piety_positive
+	stacking = yes
+	monthly_piety = 0.1
+}
+
+dod_power_piety_2 = {
+	icon = piety_positive
+	stacking = yes
+	monthly_piety = 0.2
+}
+
+dod_power_piety_3 = {
+	icon = piety_positive
+	stacking = yes
+	monthly_piety = 0.5
+}
+
+dod_power_piety_4 = {
+	icon = piety_positive
+	stacking = yes
+	monthly_piety = 1
+}
+
+dod_power_gold_1 = {
+	icon = economy_positive
+	stacking = yes
+	tax_mult = 0.01
+}
+
+dod_power_gold_2 = {
+	icon = economy_positive
+	stacking = yes
+	tax_mult = 0.02
+}
+
+dod_power_gold_3 = {
+	icon = economy_positive
+	stacking = yes
+	tax_mult = 0.05
+}
+
+dod_power_gold_4 = {
+	icon = economy_positive
+	stacking = yes
+	tax_mult = 0.1
+}
+
+dod_power_martial_1 = {
+	icon = martial_positive
+	stacking = yes
+	martial = 1
+}
+
+dod_power_martial_2 = {
+	icon = martial_positive
+	stacking = yes
+	martial = 2
+}
+
+dod_power_martial_3 = {
+	icon = martial_positive
+	stacking = yes
+	martial = 5
+}
+
+dod_power_martial_4 = {
+	icon = martial_positive
+	stacking = yes
+	martial = 10
+}
+
+dod_power_diplomacy_1 = {
+	icon = diplomacy_positive
+	stacking = yes
+	diplomacy = 1
+}
+
+dod_power_diplomacy_2 = {
+	icon = diplomacy_positive
+	stacking = yes
+	diplomacy = 2
+}
+
+dod_power_diplomacy_3 = {
+	icon = diplomacy_positive
+	stacking = yes
+	diplomacy = 5
+}
+
+dod_power_diplomacy_4 = {
+	icon = diplomacy_positive
+	stacking = yes
+	diplomacy = 10
+}
+
+dod_power_learning_1 = {
+	icon = learning_positive
+	stacking = yes
+	learning = 1
+}
+
+dod_power_learning_2 = {
+	icon = learning_positive
+	stacking = yes
+	learning = 2
+}
+
+dod_power_learning_3 = {
+	icon = learning_positive
+	stacking = yes
+	learning = 5
+}
+
+dod_power_learning_4 = {
+	icon = learning_positive
+	stacking = yes
+	learning = 10
+}
+
+dod_power_health_1 = {
+	icon = health_positive
+	stacking = yes
+	health = 0.25
+}
+
+dod_power_health_2 = {
+	icon = health_positive
+	stacking = yes
+	health = 0.5
+}
+
+dod_power_health_3 = {
+	icon = health_positive
+	stacking = yes
+	health = 1
+}
+
+dod_power_health_4 = {
+	icon = health_positive
+	stacking = yes
+	health = 2
+}
+
+dod_power_opinion_1 = {
+	icon = county_modifier_opinion_positive
+	stacking = yes
+	general_opinion = 2
+}
+
+dod_power_opinion_2 = {
+	icon = county_modifier_opinion_positive
+	stacking = yes
+	general_opinion = 4
+}
+
+dod_power_opinion_3 = {
+	icon = county_modifier_opinion_positive
+	stacking = yes
+	general_opinion = 10
+}
+
+dod_power_opinion_4 = {
+	icon = county_modifier_opinion_positive
+	stacking = yes
+	general_opinion = 20
+}
+
+# Благословение Рассвета — четвёртый вариант драфта после Обожествления. Складывается.
+dod_blessing_of_dawn = {
+	icon = magic_positive
+	stacking = yes
+	monthly_prestige = 0.1
+	monthly_piety = 0.1
+	tax_mult = 0.01
+}
+
+# Аура божества — перманентно, выдаётся решением Обожествления
+# БЕЗ stacking: выдаётся строго один раз (флаг dod_deity),
+# двойная выдача невозможна, так безопаснее
+dod_apotheosis = {
+	icon = magic_positive
+	diplomacy = 1
+	martial = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	monthly_prestige = 0.5
+	monthly_piety = 0.5
+}
+
+# Благодать божества — временная, на цель исцеления
+# stacking = yes: два божества разных поколений могут благословить
+# одну цель в пределах её 10 лет — обе Благодати должны работать
+dod_healing_touch = {
+	icon = health_positive
+	stacking = yes
+	health = 1
+}

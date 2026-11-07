@@ -1,0 +1,4 @@
+divinity_roguelike_user = {
+	shown_in_ruler_designer = no
+	fame = yes
+}

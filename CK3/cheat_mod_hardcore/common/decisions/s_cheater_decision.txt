@@ -1,0 +1,78 @@
+become_cheater_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+	major = yes
+
+	ai_check_interval = 0
+
+	is_shown = {
+		NOT = { has_trait = s_cheater }
+	}
+
+	effect = {
+		add_trait = s_cheater
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+cheater_enhance_dynasty_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+	major = yes
+
+	ai_check_interval = 0
+
+	cooldown = { days = 16000 }
+
+	is_shown = {
+		has_trait = s_cheater
+	}
+
+	effect = {
+		root.dynasty = {
+			add_dynasty_modifier = cheater_dynasty
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+cheater_increase_wealth = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+	}
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_trait = s_cheater
+	}
+
+	effect = {
+		custom_tooltip = cheater_increase_wealth_tooltip
+		trigger_event = cheater_events.0001
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
