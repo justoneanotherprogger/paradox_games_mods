@@ -1,0 +1,33 @@
+﻿l_english:
+ 
+ ###################################################
+ # Non-Repeatable Tech
+ ###################################################
+
+ strateg_tech_physics_1: "Quantum Computing"
+ strateg_tech_physics_1_desc: "With processing speeds that defy classical limits, the potential of quantum computers is boundless. This revolutionary technology heralds a great leap into uncharted regions of problem-solving."
+ strateg_tech_physics_2: "Unified Field Theory"
+ strateg_tech_physics_2_desc: "The fundamental forces of the universe can be mediated by physical fields. Mastering this process allows us to play as gods - at least within the confines of the science lab."
+ strateg_tech_physics_3: "Quantum Gravitational Waves"
+ strateg_tech_physics_3_desc: "We knew gravity and time were linked long before we reached the stars. Now, our understanding of this unique relationship has reached a tipping point, allowing us to manipulate forces on a previously unimaginable scale."
+ strateg_tech_physics_4: "Thesis of Everything"
+ strateg_tech_physics_4_desc: "... therefore we postulate that the meaning of existence, and the origin and purpose of all creation can be summed up as a simple formula as follows..."
+ 
+ strateg_tech_engineering_1: "Nanomechanics"
+ strateg_tech_engineering_1_desc: "Further breakthroughs in mechanical engineering required us to descend to the nanometric scale. We are now able to manipulate physical systems in  never-before-seen ways."
+ strateg_tech_engineering_2: "Self-Connecting Circuitry"
+ strateg_tech_engineering_2_desc: "Much as organic neurons reforge lost connections by means of axonal sprouting, these circuits are capable of self-overhaul. Even the simplest computing systems are now expected to evolve while in use."
+ strateg_tech_engineering_3: "Supersolid Materials"
+ strateg_tech_engineering_3_desc: "The quantum mechanical properties of these materials hold the key to superposition states, a revolutionary development for both material and industrial science."
+ strateg_tech_engineering_4: "Zero-Resistance Architecture"
+ strateg_tech_engineering_4_desc: "These advanced materials, absent of any frictional constraints, permit mechanical longevity on an unprecedented scale. With the removal of the previously required lubricant our structures can function within extreme temperature ranges."
+ 
+ strateg_tech_society_1: "Standardized Interstellar Timekeeping"
+ strateg_tech_society_1_desc: "In an era where interstellar travel is commonplace, the adoption of a unified temporal framework serves as a linchpin for progress. Whether for organizing galactic commutes or facilitating astrophysical observations, standard time represents a visionary stride towards unity and precision."
+ strateg_tech_society_2: "Xenobiology"
+ strateg_tech_society_2_desc: "The study of xenobiology invites us to explore the possibility of life beyond conventional paradigms, thriving in environments far removed from our own. Every new biosphere allows for parallels to be drawn and the origins of life itself to become clearer."
+ strateg_tech_society_3: "Exoplanetary Logistics"
+ strateg_tech_society_3_desc: "Comprehensive logistical systems optimize the movement of people, resources, and information across interstellar distances. This paradigm not only promotes cohesion between core world and colony, but serves as a testament to our adaptability and resilience in the face of large-scale challenges."
+ strateg_tech_society_4: "Origins of Sapience"
+ strateg_tech_society_4_desc: "By deciphering the neural and cognitive mechanisms that underpin sapience, researchers can now delineate its boundaries and constraints."
+ 

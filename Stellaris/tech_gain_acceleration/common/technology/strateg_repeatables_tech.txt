@@ -1,0 +1,971 @@
+### New Repeatable Techs ###
+
+@EarlyRepeatableTechCost = 50000
+@EarlyRepeatableTechLevelCost = 5000
+@EarlyRepeatableWeight = 12.5
+@EarlyRepeatableTier = 5
+
+tech_repeatable_improved_alloy_output = {
+	area = engineering
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+    category = { industry }
+    prerequisites = { "tech_alloys_2" }
+	levels = -1
+
+	weight = @EarlyRepeatableWeight
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	ai_weight = {
+		factor = 1.0
+    }
+
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.03
+	}
+}
+
+tech_repeatable_improved_station_output = {
+	area = engineering
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+    category = { industry }
+    prerequisites = { "tech_space_mining_5" }
+	levels = -1
+
+    weight = @EarlyRepeatableWeight
+
+    weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	ai_weight = {
+		factor = 1.0
+    }
+
+	modifier = {
+		station_gatherers_produces_mult = 0.10
+	}
+}
+
+tech_repeatable_improved_motes_output = {
+	area = physics
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+    category = { materials }
+    prerequisites = { "tech_volatile_motes" }
+	levels = -1
+
+    weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+    }
+    
+	modifier = {
+		planet_jobs_volatile_motes_produces_mult = 0.10
+	}
+}
+
+tech_repeatable_improved_gases_output = {
+	area = engineering
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+    category = { materials }
+    prerequisites = { "tech_exotic_gases" }
+	levels = -1
+
+    weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+    }
+    
+	modifier = {
+		planet_jobs_exotic_gases_produces_mult = 0.10
+	}
+}
+
+tech_repeatable_improved_crystals_output = {
+	area = engineering
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+    category = { materials }
+    prerequisites = { "tech_rare_crystals" }
+	levels = -1
+
+    weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+    }
+    
+	modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.10
+	}
+}
+
+tech_repeatable_reduced_building_maintenance = {
+	area = physics
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { computing }
+	levels = 10
+	prerequisites = { "tech_construction_templates" }
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	potential = {
+		NOT = { is_country_type = fallen_empire }
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        planet_buildings_upkeep_mult = -0.05
+		starbases_upkeep_mult = -0.05
+		planet_districts_upkeep_mult = -0.05
+	}
+}
+
+tech_repeatable_reduced_ship_maintenance = {
+	area = physics
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { voidcraft }
+	levels = 10
+	prerequisites = { "tech_antimatter_power" }
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	potential = {
+		NOT = { is_country_type = fallen_empire }
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        ships_upkeep_mult = -0.05
+    }
+}
+
+tech_repeatable_ship_build_speed = {
+	area = physics
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { computing }
+	levels = -1
+	prerequisites = { "tech_basic_science_lab_3" }
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	potential = {
+		NOT = { is_country_type = fallen_empire }
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        starbase_shipyard_build_speed_mult   = 0.05
+    }
+}
+
+tech_repeatable_trade_value = {
+	area = physics
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { computing }
+	levels = -1
+	prerequisites = { "tech_interstellar_economics" }
+	weight = @EarlyRepeatableWeight
+
+	potential = {
+       	is_gestalt = no
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        trade_value_mult   = 0.05
+    }
+}
+
+tech_repeatable_clerk_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_global_production_strategy" }
+	weight = @EarlyRepeatableWeight
+
+	potential = {
+		is_gestalt = no
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        job_clerk_per_pop = 0.01
+    }
+}
+
+tech_repeatable_foundry_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_global_production_strategy" }
+	weight = @EarlyRepeatableWeight
+	
+	potential = {
+		is_gestalt = no
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        job_foundry_per_pop = 0.002
+    }
+}
+
+tech_repeatable_artisan_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_global_production_strategy" }
+	weight = @EarlyRepeatableWeight
+	
+	potential = {
+		is_gestalt = no
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+		
+	modifier = {
+        job_artisan_per_pop = 0.002
+    }
+}
+
+tech_repeatable_researcher_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_global_production_strategy" }
+	weight = @EarlyRepeatableWeight
+	
+	potential = {
+		is_gestalt = no
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+		
+	modifier = {
+        job_researcher_per_pop = 0.005
+    }
+}
+
+tech_repeatable_foundry_drone_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_embodied_dynamism" }
+	weight = @EarlyRepeatableWeight
+
+	potential = {
+		is_gestalt = yes
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		job_alloy_drone_per_pop = 0.002
+  	}
+}
+
+tech_repeatable_brain_drone_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_embodied_dynamism" }
+	weight = @EarlyRepeatableWeight
+
+	potential = {
+		has_authority = auth_hive_mind
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		job_brain_drone_per_pop = 0.005
+  	}
+}
+
+tech_repeatable_calculator_drone_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_embodied_dynamism" }
+	weight = @EarlyRepeatableWeight
+	
+	potential = {
+		has_authority = auth_machine_intelligence
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+		
+	modifier = {
+		job_calculator_per_pop = 0.005
+  	}
+}
+
+tech_repeatable_maintenance_drone_jobs = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_embodied_dynamism" }
+	weight = @EarlyRepeatableWeight
+	
+	potential = {
+		is_gestalt = yes
+		is_country_type = default
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		job_maintenance_drone_per_pop = 0.01
+  	}
+}
+
+tech_repeatable_pop_growth = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { biology }
+	levels = -1
+	prerequisites = { "tech_gene_tailoring" }
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	potential = {
+		NOT = { is_country_type = fallen_empire }
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        pop_growth_speed = 0.05
+    }
+}
+
+tech_repeatable_pop_assembly = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { industry }
+	levels = -1
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+	
+	potential = {
+       	OR = { 
+           	has_technology = tech_droid_workers
+           	has_authority = auth_machine_intelligence
+		}
+		NOT = { is_country_type = fallen_empire }
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        planet_pop_assembly_mult = 0.05
+    }
+}
+
+tech_repeatable_housing = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { new_worlds }
+	levels = -1
+	prerequisites = { "tech_food_processing_2" }
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	potential = {
+		NOT = { is_country_type = fallen_empire }
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        planet_housing_add = 5
+    }
+}
+
+tech_repeatable_fire_rate = {
+	area = society
+	cost = @EarlyRepeatableTechCost
+	cost_per_level = @EarlyRepeatableTechLevelCost
+	tier = @EarlyRepeatableTier
+	category = { military_theory }
+	levels = -1
+	prerequisites = { "tech_command_matrix" }
+	weight = @EarlyRepeatableWeight
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			years_passed > 100
+		}
+		modifier = {
+			factor = 1.2
+			years_passed > 200
+		}
+		modifier = {
+			factor = 1.3
+			years_passed > 300
+		}
+		modifier = {
+			factor = 1.4
+			years_passed > 400
+		}
+		modifier = {
+			factor = 1.5
+			years_passed > 500
+		}
+	}
+
+	potential = {
+		NOT = { is_country_type = fallen_empire }
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+        ship_fire_rate_mult = 0.05
+    }
+}
+

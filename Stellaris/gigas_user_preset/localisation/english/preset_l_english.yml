@@ -1,0 +1,5 @@
+﻿ l_english:
+ 
+   giga_menu_preset_user:0 "§HUser Preset§!"
+   giga_preset.2.name:0 "User Preset Event"
+   giga_preset.2.desc:0 "The User Preset was used. Refer back to the Gigastructures Menu for confirmation."

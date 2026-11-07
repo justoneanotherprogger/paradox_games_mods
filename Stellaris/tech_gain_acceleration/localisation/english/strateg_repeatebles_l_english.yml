@@ -1,0 +1,55 @@
+﻿l_english:
+ 
+ ###################################################
+ # Repeatable Tech
+ ###################################################
+
+ tech_repeatable_improved_alloy_output: "Alloy Processing Efficiency Benchmarks"
+ tech_repeatable_improved_alloy_output_desc: "Become the Alloy."
+ tech_repeatable_improved_station_output: "Extraction Maximization Protocols"
+ tech_repeatable_improved_station_output_desc: "How can we get more out of this rock? Sir, you already have the entire rock. I want more!"
+ tech_repeatable_improved_motes_output: "Motivated Mote Making"
+ tech_repeatable_improved_motes_output_desc: "He who controls the motes, controls the universe."
+ tech_repeatable_improved_gases_output: "Reticulated Gas Distribution"
+ tech_repeatable_improved_gases_output_desc: "Gas will fill the volume of any container. Conveniently we have some really big containers."
+ tech_repeatable_improved_crystals_output: "Augmented Crystallization Processess"
+ tech_repeatable_improved_crystals_output_desc: "Crystals are forever."
+ tech_repeatable_reduced_building_maintenance: "Photon Flow Regulation"
+ tech_repeatable_reduced_building_maintenance_desc: "The most effective way to regulate photon flow is to remember to turn off the lights..."
+ tech_repeatable_reduced_ship_maintenance: "Jefferies Tubes"
+ tech_repeatable_reduced_ship_maintenance_desc: "Somehow, small redundant crawlspaces that go no where and do nothing seem to make our ships run more efficiently."
+ tech_repeatable_ship_build_speed: "Doctrine: Mass Assault"
+ tech_repeatable_ship_build_speed_desc: "Getting our men to the frontline is most effective when they have ships to fire from."
+ tech_repeatable_trade_value: "Quantum Economics"
+ tech_repeatable_trade_value_desc: "Markets behave differently when under direct observation, because consumers behavior depends on factors that the consumer is unaware of until the matter is brought up. Quantum Finance is the art of manipulating markets without actually observing the market, and therefore altering it anyway."
+
+ tech_repeatable_pop_growth: "Atmospheric Aphrodisiacs"
+ tech_repeatable_pop_growth_desc: "Procreate for the greater good."
+ tech_repeatable_pop_assembly: "Assembly Algorithims"
+ tech_repeatable_pop_assembly_desc: "Say 'automated assemblers assemble autonomously' five times fast."
+ tech_repeatable_housing: "High Density Development"
+ tech_repeatable_housing_desc: "The art of fitting more people into less space, and making sure they are happy about it."
+ tech_repeatable_fire_rate: "Battlestation Drilling"
+ tech_repeatable_fire_rate_desc: "Practice makes perfect."
+
+ tech_repeatable_foundry_jobs: "Alloy Recycling"
+ tech_repeatable_foundry_jobs_desc: "Waste not, Want not."
+ tech_repeatable_artisan_jobs: "Planned Obsolescence"
+ tech_repeatable_artisan_jobs_desc: "Where is the profit in permanence?"
+ tech_repeatable_researcher_jobs: "Interstellar Science Initiative"
+ tech_repeatable_researcher_jobs_desc: "Generous research grants and investment in higher education will ensure that science is the highest form of achievement in our society."
+ tech_repeatable_clerk_jobs: "Mercantilism"
+ tech_repeatable_clerk_jobs_desc: "Trade is the grease of the great machinery of society"
+
+ tech_repeatable_foundry_drone_jobs: "Alloy Reprocessing"
+ tech_repeatable_foundry_drone_jobs_desc: "Waste not, Want not."
+ tech_repeatable_brain_drone_jobs: "Improved Synaptic Capacity"
+ tech_repeatable_brain_drone_jobs_desc: "Dedicated thought patterns to the advancement of the hive."
+ tech_repeatable_calculator_drone_jobs: "Synaptic Latency Reduction"
+ tech_repeatable_calculator_drone_jobs_desc: "Utilizing excess computational power for self improvement subroutines."
+ tech_repeatable_maintenance_drone_jobs: "Drone Durability Protocols"
+ tech_repeatable_maintenance_drone_jobs_desc: "Proper care, hygiene, and storage can dramatically improve the useful lifespan of a drone. Not that we care about the lifespans of drones."
+
+ specialization_job: "Job §YSpecialization§!"
+ specialization_job_desc: "You can research a total of 100 §Yjob specialization§! technologies, and a maximum of 5 in any one type."
+ 

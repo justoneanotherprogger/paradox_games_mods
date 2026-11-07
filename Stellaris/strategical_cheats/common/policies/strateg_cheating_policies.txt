@@ -1,0 +1,77 @@
+strateg_cheating_policy = {
+
+	potential = {
+		is_ai = no
+	}
+
+	option = {
+		name = "strateg_cheating_disabled"
+
+		policy_flags = {
+			strateg_cheating_disabled
+		}
+
+		on_enabled = {
+			# custom_tooltip = "policy_allow_slavery_effect_disable"
+		}
+
+		modifier = {}
+
+	}
+
+	option = {
+		name = "strateg_cheating_enabled"
+
+		policy_flags = {
+			strateg_cheating_enabled
+		}
+
+		modifier = {
+			country_war_exhaustion_mult = -1
+			local_trade_protection_add = 1000
+			leader_skill_levels = 20
+			species_leader_exp_gain = 0.5
+			intel_encryption_add = 10
+
+			planet_researchers_physics_research_produces_add = 3
+			planet_researchers_society_research_produces_add = 3
+			planet_researchers_engineering_research_produces_add = 3
+			planet_researchers_minor_artifacts_produces_add = 0.1
+
+			planet_administrators_unity_produces_add = 3
+			planet_administrators_minor_artifacts_produces_add = 0.1
+
+			planet_jobs_produces_mult = 0.25
+
+			army_health = 100
+			army_morale = 100
+			army_damage_mult = 100
+			army_morale_damage_mult = 100
+
+			ship_accuracy_add = 100
+			ship_accuracy_mult = 10
+			ship_evasion_add = 100
+			ship_evasion_mult = 10
+
+			ship_weapon_range_mult = 15
+			ship_armor_damage_mult = 1000
+			ship_hull_damage_mult = 1000
+			ship_shield_damage_mult = 1000
+
+			ship_armor_regen_add_static = 1000
+			ship_armor_regen_add_perc = 100
+			ship_hull_regen_add_static = 1000
+			ship_hull_regen_add_perc = 100
+			ship_shield_regen_add_static = 1000
+			ship_shield_regen_add_perc = 100
+		}
+
+		valid = {
+			is_ai = no
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
